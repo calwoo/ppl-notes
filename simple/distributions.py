@@ -51,3 +51,4 @@ def geometric(p=0.5):
     """
     Recursive geometric distribution, x ~ Geometric(p)
     """
+    pass
