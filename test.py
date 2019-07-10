@@ -24,12 +24,12 @@ plt.show()
 samples_np = []
 samples_test = []
 for i in range(5000):
-    x = np.random.gamma(shape=3, scale=1.0)
-    y = gamma(alpha=3, beta=1)
+    x = beta(a=1, b=1)
+    y = beta(a=8, b=4)
     samples_np.append(x)
     samples_test.append(y)
 
-plt.hist(samples_np, bins=50, density=True, label="np.random.gamma")
-plt.hist(samples_test, bins=50, density=True, label="distributions.gamma")
+plt.hist(samples_np, bins=50, density=True, label="prior beta")
+plt.hist(samples_test, bins=50, density=True, label="posterior beta")
 plt.legend(loc="best")
 plt.show()
