@@ -28,3 +28,25 @@ def geometric(p=0.5):
         return 1
     else:
         return 1 + geometric(p)
+
+### BERNOULLI
+class Dist:
+    # Discrete distribution class.
+    def sample(self):
+        pass
+
+    def support(self):
+        pass
+
+class Bernoulli(Dist):
+    def __init__(self, p=0.5):
+        self.p = p
+    
+    def sample(self):
+        return int(uniform(0,1) > 0.5)
+
+    def support(self):
+        return [0, 1]
+
+    def score(self, s):
+        return np.log(0.5)
